@@ -61,4 +61,7 @@ export default {
    top: 20px;
    color: #fff;
  }
+header{
+   position: relative
+}
 </style>

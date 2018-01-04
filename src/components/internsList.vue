@@ -53,10 +53,11 @@ export default {
       var that = this
       $.ajax({
         type: 'get',
-        url: 'http://172.163.0.123/shixiseng/data/internList.php',
+        url: 'http://192.168.50.81/shixiseng/data/internList.php',
         dataType: 'jsonp',
         success: function (data) {
           that.list = data
+          console.log(data)
           function format (times) {
             function formatTimes (t) {
               return `${t < 10 ? 0 : ''}${t}`

@@ -1,28 +1,30 @@
 <template>
-  <div class="containerBox">
-   <HeaderSxs></HeaderSxs> 
-   <!-- <input type="text" v-model="msg">
-   <div v-on:click="changeData">请点击我更换内容
 
-   </div> -->
-   <SearchTips></SearchTips>
-   <InternsList></InternsList>
-   <div class="moreInterns">
-     前往职位列表，查看更多职位
-   </div>
-  </div>
-  
+     <div class="containerBox">
+      <HeaderSxs></HeaderSxs> 
+      <!-- <input type="text" v-model="msg">
+      <div v-on:click="changeData">请点击我更换内容</div> -->
+      <SearchTips></SearchTips>
+      <InternsList></InternsList>
+      <div class="moreInterns">
+      前往职位列表，查看更多职位
+      </div>
+      <footerSxs></footerSxs>
+     </div>
+ 
 </template>
 
 <script>
 import HeaderSxs from './header'
 import SearchTips from './search_tips'
 import InternsList from './internsList'
+import footerSxs from './footer'
 export default {
   components: {
     HeaderSxs,
     SearchTips,
-    InternsList
+    InternsList,
+    footerSxs
   },
   data () {
     return {
@@ -54,5 +56,6 @@ export default {
     margin-top: 15px;
     padding: 10px 0;
     color: #54B2FF;
+    cursor: pointer;
   }
 </style>
