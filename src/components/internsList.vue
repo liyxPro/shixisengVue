@@ -53,7 +53,7 @@ export default {
       var that = this
       $.ajax({
         type: 'get',
-        url: 'http://192.168.50.81/shixiseng/data/internList.php',
+        url: 'http://39.106.24.44:80/shixiseng/data/internList.php',
         dataType: 'jsonp',
         success: function (data) {
           that.list = data
