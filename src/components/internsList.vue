@@ -53,21 +53,19 @@ export default {
       var that = this
       $.ajax({
         type: 'get',
-        url: 'http://39.106.24.44:80/shixiseng/data/internList.php',
+        url: 'http://39.106.24.44:80/shixisheng/data/internList.php',
         dataType: 'jsonp',
         success: function (data) {
           that.list = data
-          console.log(data)
           function format (times) {
             function formatTimes (t) {
               return `${t < 10 ? 0 : ''}${t}`
             }
             var time = `${formatTimes(times.getMonth() + 1)}-${formatTimes(times.getDay())}-${formatTimes(times.getHours())}:${formatTimes(times.getMinutes())}`
-            console.log(time)
             return time
           }
           for (let item of data) {
-            var times = new Date(item.jpubTime)
+            var times = new Date(parseInt(item.jpubTime))
             var formatTime = format(times)
             item.jpubTime = formatTime
           }
