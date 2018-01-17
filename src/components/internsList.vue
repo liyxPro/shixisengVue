@@ -2,8 +2,8 @@
   <div>
     <!-- :footer="footer"  -->
     <!-- <panel :list="list" :type="type" @on-img-error="onImgError"></panel> -->
-    <ul class="panelBox" :list="list">
-      <li class="jobBox"  v-for="items in list">
+    <ul class="panelBox" :list="list" @click="internList">
+      <li class="jobBox"  v-for="items in list" >
       
         <div class="companyImg">
           <img :src="require('../assets/static/'+items.cimg)" alt="">
@@ -36,6 +36,9 @@ export default {
   methods: {
     onImgError (item, $event) {
       console.log(item, $event)
+    },
+    internList (e) {
+      console.log('1111')
     }
   },
   data () {

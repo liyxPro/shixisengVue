@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="vue-banner">
-      <span class="searchButton">搜索</span>
+      <span class="searchButton" @click="searchList">搜索</span>
       <swiper :list="demo01_list" v-model="demo01_index" :aspect-ratio="300/800" @on-index-change="demo01_onIndexChange"></swiper>
       <!--<p>current index: {{demo01_index}}</p>
       <x-button @click.native="demo01_index = 0">go to 0</x-button>
@@ -44,6 +44,9 @@ export default {
   methods: {
     demo01_onIndexChange (index) {
       this.demo01_index = index
+    },
+    searchList (e) {
+      console.log(event)
     }
   }
 }
